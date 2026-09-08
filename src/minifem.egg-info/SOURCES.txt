@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/minifem/__init__.py
+src/minifem/assembly.py
+src/minifem/element.py
+src/minifem/material.py
+src/minifem/mesh.py
+src/minifem/physics.py
+src/minifem/solver.py
+src/minifem.egg-info/PKG-INFO
+src/minifem.egg-info/SOURCES.txt
+src/minifem.egg-info/dependency_links.txt
+src/minifem.egg-info/requires.txt
+src/minifem.egg-info/top_level.txt
+tests/test_thermal_1d.py
