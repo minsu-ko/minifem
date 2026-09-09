@@ -19,3 +19,9 @@ class AWG32:
     diameter: float = 0.202e-3 # meters
     radius = diameter / 2
     area = np.pi * radius ** 2
+
+@dataclass
+class KeycomCoax:
+    diameter: float = 2.2e-3 # meters
+    radius = diameter / 2
+    area = np.pi * radius ** 2

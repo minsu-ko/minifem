@@ -4,8 +4,10 @@ import minifem
 from pathlib import Path
 from minifem.wires import AWG28, AWG30, AWG32
 
-length = 0.1
+length = 0.2
 area = AWG28.area
+T1 = 300
+T2 = 50
 
 mesh = minifem.Mesh1D.linspace(
     start=0.0,
@@ -24,14 +26,14 @@ result = minifem.solve_thermal_1d(
     material=material,
     area=area,
     boundary_temperatures={
-        0: 300.0,
-            mesh.num_nodes - 1: 50,
+        0: T1,
+            mesh.num_nodes - 1: T2,
     },
 )
 
 print("Converged:", result.converged)
 print("Iterations:", result.iterations)
-print("Heat flow:", result.heat_flow, "W")
+print("Heat flow:", f"{result.heat_flow:.3e}", "W")
 
 fig, axes = plt.subplots(
     1,
